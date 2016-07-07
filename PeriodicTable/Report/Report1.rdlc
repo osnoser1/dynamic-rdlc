@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="PeriodicTable">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>5638a987-6a10-4a2a-ac00-fcc9dac62dfd</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>PeriodicTable</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AtomicNumber">
+          <DataField>AtomicNumber</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="ChemicalProperty">
+          <DataField>ChemicalProperty</DataField>
+          <rd:TypeName>PeriodicTable.ChemicalProperty</rd:TypeName>
+        </Field>
+        <Field Name="ChemicalSymbol">
+          <DataField>ChemicalSymbol</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CountryOfDiscovery">
+          <DataField>CountryOfDiscovery</DataField>
+          <rd:TypeName>PeriodicTable.CountryOfDiscovery</rd:TypeName>
+        </Field>
+        <Field Name="Group">
+          <DataField>Group</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MassUncertainty">
+          <DataField>MassUncertainty</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NaturalOccurrence">
+          <DataField>NaturalOccurrence</DataField>
+          <rd:TypeName>PeriodicTable.NaturalOccurrence</rd:TypeName>
+        </Field>
+        <Field Name="Period">
+          <DataField>Period</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RelativeAtomicMass">
+          <DataField>RelativeAtomicMass</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+          <rd:TypeName>PeriodicTable.State</rd:TypeName>
+        </Field>
+        <Field Name="Url">
+          <DataField>Url</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>PeriodicTable</rd:DataSetName>
+        <rd:TableName>Element</rd:TableName>
+        <rd:ObjectDataSourceType>PeriodicTable.Element, PeriodicTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet2">
+      <Query>
+        <DataSourceName>PeriodicTable</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="AtomicNumber">
+          <DataField>AtomicNumber</DataField>
+          <rd:TypeName>System.Object</rd:TypeName>
+        </Field>
+        <Field Name="ChemicalProperty">
+          <DataField>ChemicalProperty</DataField>
+          <rd:TypeName>PeriodicTable.ChemicalProperty</rd:TypeName>
+        </Field>
+        <Field Name="ChemicalSymbol">
+          <DataField>ChemicalSymbol</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CountryOfDiscovery">
+          <DataField>CountryOfDiscovery</DataField>
+          <rd:TypeName>PeriodicTable.CountryOfDiscovery</rd:TypeName>
+        </Field>
+        <Field Name="Group">
+          <DataField>Group</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MassUncertainty">
+          <DataField>MassUncertainty</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NaturalOccurrence">
+          <DataField>NaturalOccurrence</DataField>
+          <rd:TypeName>PeriodicTable.NaturalOccurrence</rd:TypeName>
+        </Field>
+        <Field Name="Period">
+          <DataField>Period</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RelativeAtomicMass">
+          <DataField>RelativeAtomicMass</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+          <rd:TypeName>PeriodicTable.State</rd:TypeName>
+        </Field>
+        <Field Name="Url">
+          <DataField>Url</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>PeriodicTable</rd:DataSetName>
+        <rd:TableName>Element</rd:TableName>
+        <rd:ObjectDataSourceType>PeriodicTable.Element, PeriodicTable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix6">
+            <TablixCorner>
+              <TablixCornerRows>
+                <TablixCornerRow>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox31">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Group</Value>
+                                <Style>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                              <TextRun>
+                                <Value>à</Value>
+                                <Style>
+                                  <FontStyle>Normal</FontStyle>
+                                  <FontFamily>Wingdings</FontFamily>
+                                  <FontWeight>Normal</FontWeight>
+                                  <TextDecoration>None</TextDecoration>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>â</Value>
+                                <Style>
+                                  <FontStyle>Normal</FontStyle>
+                                  <FontFamily>Wingdings</FontFamily>
+                                  <FontWeight>Normal</FontWeight>
+                                  <TextDecoration>None</TextDecoration>
+                                </Style>
+                              </TextRun>
+                              <TextRun>
+                                <Value>Period</Value>
+                                <Style>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox31</rd:DefaultName>
+                        <Style>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                </TablixCornerRow>
+              </TablixCornerRows>
+            </TablixCorner>
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.06146in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.81875in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle4">
+                          <ReportItems>
+                            <Tablix Name="Tablix7">
+                              <TablixBody>
+                                <TablixColumns>
+                                  <TablixColumn>
+                                    <Width>1in</Width>
+                                  </TablixColumn>
+                                </TablixColumns>
+                                <TablixRows>
+                                  <TablixRow>
+                                    <Height>0.16667in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="AtomicNumber">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Fields!AtomicNumber.Value</Value>
+                                                    <Style>
+                                                      <FontSize>12pt</FontSize>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>AtomicNumber</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                  <TablixRow>
+                                    <Height>0.28125in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="ChemicalSymbol">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Fields!ChemicalSymbol.Value</Value>
+                                                    <Style>
+                                                      <FontSize>16pt</FontSize>
+                                                      <FontWeight>Bold</FontWeight>
+                                                      <TextDecoration>None</TextDecoration>
+                                                      <Color>=Switch(Fields!State.Value = 0, "Gray", Fields!State.Value = 1, "Dark Blue", Fields!State.Value = 2, "Aqua", Fields!State.Value = 3, "Red")</Color>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>ChemicalSymbol</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                  <TablixRow>
+                                    <Height>0.17708in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Name">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>="&lt;a href=""" &amp; Fields!Url.Value &amp; """&gt;" &amp; Fields!Name.Value &amp; "&lt;/a&gt;"</Value>
+                                                    <MarkupType>HTML</MarkupType>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Name</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                  <TablixRow>
+                                    <Height>0.14583in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="RelativeAtomicMass">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=iif(Fields!MassUncertainty.Value &lt;&gt; 0, Fields!RelativeAtomicMass.Value &amp; "(" &amp; Fields!MassUncertainty.Value &amp; ")", IIF(IsNumeric(Fields!AtomicNumber.Value), "[" &amp; Fields!RelativeAtomicMass.Value &amp; "]", ""))</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Right</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>RelativeAtomicMass</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                </TablixRows>
+                              </TablixBody>
+                              <TablixColumnHierarchy>
+                                <TablixMembers>
+                                  <TablixMember />
+                                </TablixMembers>
+                              </TablixColumnHierarchy>
+                              <TablixRowHierarchy>
+                                <TablixMembers>
+                                  <TablixMember />
+                                  <TablixMember />
+                                  <TablixMember />
+                                  <TablixMember />
+                                </TablixMembers>
+                              </TablixRowHierarchy>
+                              <DataSetName>DataSet1</DataSetName>
+                              <Top>0.025in</Top>
+                              <Left>0.025in</Left>
+                              <Height>0.77083in</Height>
+                              <Width>1in</Width>
+                              <Style>
+                                <Border>
+                                  <Color>Maroon</Color>
+                                  <Style>=Switch(Not IsNumeric(Fields!AtomicNumber.Value), "None", Fields!NaturalOccurrence.Value = 0, "Solid", Fields!NaturalOccurrence.Value = 1, "Dashed", Fields!NaturalOccurrence.Value = 2, "Dotted")</Style>
+                                  <Width>2pt</Width>
+                                </Border>
+                                <BackgroundColor>=Switch(Fields!AtomicNumber.Value = 0, "No Color", Fields!ChemicalProperty.Value = 0, "#e8e8e8", Fields!ChemicalProperty.Value = 1, "#ff6666", Fields!ChemicalProperty.Value = 2, "#ffdead", Fields!ChemicalProperty.Value = 3, "#ffbfff", Fields!ChemicalProperty.Value = 4, "#ff99cc", Fields!ChemicalProperty.Value = 5, "#ffc0c0", Fields!ChemicalProperty.Value = 6, "#cccccc", Fields!ChemicalProperty.Value = 7, "#cccc99", Fields!ChemicalProperty.Value = 8, "#a1ffc3", Fields!ChemicalProperty.Value = 9, "#e7ff8f", Fields!ChemicalProperty.Value = 10, "#c0ffff")</BackgroundColor>
+                                <BackgroundImage>
+                                  <Source>Embedded</Source>
+                                  <Value>=Switch(Fields!AtomicNumber.Value = 0 orelse Fields!CountryOfDiscovery.Value = 0, "", Fields!CountryOfDiscovery.Value = 1, "Aristotle", Fields!CountryOfDiscovery.Value = 2, "Aristotle_Germany", Fields!CountryOfDiscovery.Value = 3, "Austria", Fields!CountryOfDiscovery.Value = 4, "Denmark", Fields!CountryOfDiscovery.Value = 5, "Finland", Fields!CountryOfDiscovery.Value = 6, "France", Fields!CountryOfDiscovery.Value = 7, "Germany", Fields!CountryOfDiscovery.Value = 8, "Germany_Sweden", Fields!CountryOfDiscovery.Value = 9, "Italy", Fields!CountryOfDiscovery.Value = 10, "Romania", Fields!CountryOfDiscovery.Value = 11, "Russia", Fields!CountryOfDiscovery.Value = 12, "Spain", Fields!CountryOfDiscovery.Value = 13, "Sweden", Fields!CountryOfDiscovery.Value = 14, "Switzerland", Fields!CountryOfDiscovery.Value = 15, "UK", Fields!CountryOfDiscovery.Value = 16, "UK_France", Fields!CountryOfDiscovery.Value = 17, "UK_Germany", Fields!CountryOfDiscovery.Value = 18, "UK_Sweden_France", Fields!CountryOfDiscovery.Value = 19, "USA", Fields!CountryOfDiscovery.Value = 20, "USA_Russia")</Value>
+                                  <BackgroundRepeat>Clip</BackgroundRepeat>
+                                </BackgroundImage>
+                              </Style>
+                            </Tablix>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Group">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Group.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Group.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>0.39583in</Size>
+                    <CellContents>
+                      <Textbox Name="Group">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!Group.Value</Value>
+                                <Style>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Group</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>None</Style>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Period">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Period.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!Period.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>0.66666in</Size>
+                    <CellContents>
+                      <Textbox Name="Period">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!Period.Value</Value>
+                                <Style>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Period</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>None</Style>
+                          </Border>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet1</DataSetName>
+            <Height>1.21458in</Height>
+            <Width>1.72812in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Tablix Name="Tablix2">
+            <TablixCorner>
+              <TablixCornerRows>
+                <TablixCornerRow>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox5">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value />
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox4</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>None</Style>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                </TablixCornerRow>
+              </TablixCornerRows>
+            </TablixCorner>
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.06146in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.81875in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle2">
+                          <ReportItems>
+                            <Tablix Name="Tablix8">
+                              <TablixBody>
+                                <TablixColumns>
+                                  <TablixColumn>
+                                    <Width>1in</Width>
+                                  </TablixColumn>
+                                </TablixColumns>
+                                <TablixRows>
+                                  <TablixRow>
+                                    <Height>0.16667in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="AtomicNumber2">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Fields!AtomicNumber.Value</Value>
+                                                    <Style>
+                                                      <FontSize>12pt</FontSize>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>AtomicNumber</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                  <TablixRow>
+                                    <Height>0.28125in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="ChemicalSymbol2">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Fields!ChemicalSymbol.Value</Value>
+                                                    <Style>
+                                                      <FontSize>16pt</FontSize>
+                                                      <FontWeight>Bold</FontWeight>
+                                                      <TextDecoration>None</TextDecoration>
+                                                      <Color>=Switch(Fields!State.Value = 0, "Gray", Fields!State.Value = 1, "Dark Blue", Fields!State.Value = 2, "Aqua", Fields!State.Value = 3, "Red")</Color>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>ChemicalSymbol</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                  <TablixRow>
+                                    <Height>0.17708in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Name2">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>="&lt;a href=""" &amp; Fields!Url.Value &amp; """&gt;" &amp; Fields!Name.Value &amp; "&lt;/a&gt;"</Value>
+                                                    <MarkupType>HTML</MarkupType>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>Name</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                  <TablixRow>
+                                    <Height>0.14583in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="RelativeAtomicMass2">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Microsoft.VisualBasic.Interaction.iif(Fields!MassUncertainty.Value &lt;&gt; 0, Fields!RelativeAtomicMass.Value &amp; "(" &amp; Fields!MassUncertainty.Value &amp; ")", Microsoft.VisualBasic.Interaction.IIF(Microsoft.VisualBasic.Information.IsNumeric(Fields!AtomicNumber.Value), "[" &amp; Fields!RelativeAtomicMass.Value &amp; "]", ""))</Value>
+                                                    <Style />
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Right</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>RelativeAtomicMass</rd:DefaultName>
+                                            <Style>
+                                              <Border>
+                                                <Color>LightGrey</Color>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                </TablixRows>
+                              </TablixBody>
+                              <TablixColumnHierarchy>
+                                <TablixMembers>
+                                  <TablixMember />
+                                </TablixMembers>
+                              </TablixColumnHierarchy>
+                              <TablixRowHierarchy>
+                                <TablixMembers>
+                                  <TablixMember />
+                                  <TablixMember />
+                                  <TablixMember />
+                                  <TablixMember />
+                                </TablixMembers>
+                              </TablixRowHierarchy>
+                              <DataSetName>DataSet2</DataSetName>
+                              <Top>0.025in</Top>
+                              <Left>0.025in</Left>
+                              <Height>0.77083in</Height>
+                              <Width>1in</Width>
+                              <Style>
+                                <Border>
+                                  <Color>Maroon</Color>
+                                  <Style>=Switch(Not IsNumeric(Fields!AtomicNumber.Value), "None", Fields!NaturalOccurrence.Value = 0, "Solid", Fields!NaturalOccurrence.Value = 1, "Dashed", Fields!NaturalOccurrence.Value = 2, "Dotted")</Style>
+                                  <Width>2pt</Width>
+                                </Border>
+                                <BackgroundColor>=Switch(Fields!AtomicNumber.Value = 0, "No Color", Fields!ChemicalProperty.Value = 0, "#e8e8e8", Fields!ChemicalProperty.Value = 1, "#ff6666", Fields!ChemicalProperty.Value = 2, "#ffdead", Fields!ChemicalProperty.Value = 3, "#ffbfff", Fields!ChemicalProperty.Value = 4, "#ff99cc", Fields!ChemicalProperty.Value = 5, "#ffc0c0", Fields!ChemicalProperty.Value = 6, "#cccccc", Fields!ChemicalProperty.Value = 7, "#cccc99", Fields!ChemicalProperty.Value = 8, "#a1ffc3", Fields!ChemicalProperty.Value = 9, "#e7ff8f", Fields!ChemicalProperty.Value = 10, "#c0ffff")</BackgroundColor>
+                                <BackgroundImage>
+                                  <Source>Embedded</Source>
+                                  <Value>=Microsoft.VisualBasic.Interaction.Switch(Fields!AtomicNumber.Value = 0 OrElse Fields!CountryOfDiscovery.Value = 0, "", Fields!CountryOfDiscovery.Value = 1, "Aristotle", Fields!CountryOfDiscovery.Value = 2, "Aristotle_Germany", Fields!CountryOfDiscovery.Value = 3, "Austria", Fields!CountryOfDiscovery.Value = 4, "Denmark", Fields!CountryOfDiscovery.Value = 5, "Finland", Fields!CountryOfDiscovery.Value = 6, "France", Fields!CountryOfDiscovery.Value = 7, "Germany", Fields!CountryOfDiscovery.Value = 8, "Germany_Sweden", Fields!CountryOfDiscovery.Value = 9, "Italy", Fields!CountryOfDiscovery.Value = 10, "Romania", Fields!CountryOfDiscovery.Value = 11, "Russia", Fields!CountryOfDiscovery.Value = 12, "Spain", Fields!CountryOfDiscovery.Value = 13, "Sweden", Fields!CountryOfDiscovery.Value = 14, "Switzerland", Fields!CountryOfDiscovery.Value = 15, "UK", Fields!CountryOfDiscovery.Value = 16, "UK_France", Fields!CountryOfDiscovery.Value = 17, "UK_Germany", Fields!CountryOfDiscovery.Value = 18, "UK_Sweden_France", Fields!CountryOfDiscovery.Value = 19, "USA", Fields!CountryOfDiscovery.Value = 20, "USA_Russia")</Value>
+                                  <BackgroundRepeat>Clip</BackgroundRepeat>
+                                </BackgroundImage>
+                              </Style>
+                            </Tablix>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="AtomicNumber">
+                    <GroupExpressions>
+                      <GroupExpression>=iif(Fields!ChemicalProperty.Value = 3, Fields!AtomicNumber.Value - 57, Fields!AtomicNumber.Value - 89)</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!AtomicNumber.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>0.3in</Size>
+                    <CellContents>
+                      <Textbox Name="AtomicNumber1">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value />
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>AtomicNumber1</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>None</Style>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                </TablixMember>
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="ChemicalProperty">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!ChemicalProperty.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!ChemicalProperty.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>1.4375in</Size>
+                    <CellContents>
+                      <Textbox Name="ChemicalProperty">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Microsoft.VisualBasic.Interaction.iif(Fields!ChemicalProperty.Value = 3, "* Lanthanides", "** Actinides")</Value>
+                                <Style>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Right</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>ChemicalProperty</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>None</Style>
+                          </Border>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet2</DataSetName>
+            <Top>1.4in</Top>
+            <Left>1.35in</Left>
+            <Height>1.11875in</Height>
+            <Width>2.49896in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>3.59375in</Height>
+        <Style />
+      </Body>
+      <Width>8.19167in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Aristotle">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Aristotle_Germany">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Austria">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAEoAAAAyCAYAAAD7oU3dAAAAgUlEQVR42u3ZsQ2AMBAEwe+/O4QQkSVqAAIjB08J74CMCbaBCe/i3NdUXUAABQoUKFCgBAoUKFCgQIFSAbUtqbq4jpaqi2eMVF303lN1oECBAgUKFCiBAgUKFChQ/4UyoUzOLPfRUnWm4Nkp2HHghQEFChQoUAIFChQoUKBACdQXvVl/jG5LJieuAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Denmark">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAEIAAAAyCAYAAADodg0pAAAA2ElEQVR42u3XQQrCMBCF4bn/4SqCRfEA2lYXbTU07WaM7UbRgJARA/6LtwmBGb5AMpFus1fTrLfqmrP6aVLv/XPCmjs2Yc9OzesmRoAAAggggAACCCCAAAIIIIAAAggggAACiDwgQuOWaYtSXX2KQlwPtbarUq3rpkbuTZsmnPjQX9SP4ytEWBu6ft5jXjcxMp+cdd4hPGB8pWZiJNrwnwUIIICIQHBZLpel+VNUffB8Vhk+nz8ZqIoMBypGbP4aQAABBBBAAAEEEEAAAQQQQAABBBBAAJFRbj9yf9mR/WLDAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Finland">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAFEAAAAyCAYAAAAk7zfCAAAA0UlEQVR42u3Yuw4BQRSA4Xn/p0MQ18o1Ctq1uxxWQ4nMSCRf8ZcnOfN1c1JVVZG7uj7Hen+M3mQdg9nm7XqT1WO2xE4lSxAhQoQIESJEiBAhQoQIESJEiBAhQoT4LmLb1JG7uDSxPZy+QrzeZy9t/p1KlkaLXeRuvNzFcL79CLCrP908ZkfL/DuVLHWLl+hTwFfIfyt9+1g9gwgRIkRBhAgRoiCWQvTty/Dtc4DIcIBwCstwCnOUddmGCBEiRIgQIUKECBEiRIgQIUKECBHi77oBO+mgXF6c42MAAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="France">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAEoAAAAyCAYAAAD7oU3dAAAAgUlEQVR42u3QMQ5AQBAAQP9/nUiECAmJhkLpjivWK041xXxgmm44o5a2P2JZryjliZxzHeWNtO1xD1Okca6mESVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJ+ivqA3XLqXy4USC2AAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Germany">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAFMAAAAyCAYAAAAgGuf/AAAAgUlEQVR42u3QIQ6EUBBEwbn/5TaM3QOgYROC+zse24qUeJ3WVd29lKkgwIQJUzBhwhRMmDBhCiZMmHpibjPKVN8ZZaprRpnqN6NMMGHChCmYMGEKJkyYMAUT5oswP3MUqa69lzLVffZSprqPOYoEEyZMmIIJE6ZgwoQJUzBhwtSzP2WuNJuCN2cxAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Germany_Sweden">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Italy">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAEoAAAAyCAYAAAD7oU3dAAAAgklEQVR42u3QMQ5AQBAAQP9/nWgEuQYJhYJojivWK041xXxgmm5PUUu7TZGONcrzRs65iqeUuOclzn6IaxiraUSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRov6K+gA+oZs6b3VQ+AAAAABJRU5ErkJggg==</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Romania">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAEoAAAAyCAYAAAD7oU3dAAAAf0lEQVR42u3QMQ5AMBQA0N7/dIIGQ8PCrCwSw3eKmt7wLvBSv+zRSjcfUdYt3nuMp+Y27hxXmeIc5qi5nSRKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEiVKlChRokSJEvVX1AcR95Hvwl43sgAAAABJRU5ErkJggg==</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Russia">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAEoAAAAyCAYAAAD7oU3dAAAAeElEQVR42u3QMRGAMAwAwPg3Vy47ErrnyhAcEAH88AY+qqqZhQRRokSJEiUKUaJEiRIlShTfUedUM4u9q5nFWtXMIrOamShRokSJEiUKUaJEiRIl6r9RK59mFjvvZhYnr2YWldnMRIkSJUqUKFGIEiVKlChRovj2Aq5YjeAL78rPAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Spain">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAEoAAAAyCAYAAAD7oU3dAAAD8klEQVR42u2aW3PiOBSE8/9/286A74ABY4OvsiTbOEyAh56WmWR2a2snqdrdqgnoocsX4Qd/1eeoJfPU+RGs3teThWBBWVAWlAVlQVlQVhaUBWVB/Q6gtBvB6n09HVMfVu/r6dy7sHpfTy/ahdX7+l9Bnaln6VhQ/wTn3L3KQ1EseN+7jXXONP7woAycoQ3QiRCqDnGUBJVH6FuP93yohucieAP3kKAMJAPnWc0x8KhLF/3aQ13FULGHMXfRliF/60BU4adz1n8KSjYBaieAmIeotj4an9epC7EIUC14zaOYcSwLp98/FCjzwpf+dnxhD6oyF9WKMIybNgS1dSke49t1YdzFBv+zjz0AKPOSPUuqTDi7Nbfr65EOKgms9pAXPsqdg7pweM7fHTgDdnNcuttMKPceROY9BijBXrTfuTi2Lk7SRZd6k/LIR+4TVBhBpCmB7CBFglEnbPKraQYs6L48fRBHqZpOyU05uRh5LhyWXRAgX3lo2aPaOIbWPZTSBLaHqFt0qqSrZmjosip/BFB6jrFL0epvLClvKj8Dap86OOxZfgvCWq2gtIZKS3RJCdkq9NqA+gNDr9FKjYue3TeoS+9gkFuIvMJQeFO/kpz1NpstttlqcpakoyZQTYshq3mUk6PG4itUkaEpCa2/Y1BmodjtPDRLHyJhebEpNyHPWW77zEGSLVAu2IP8BeQhJ5AKOq3Q0UEt4ejtHDKLITYh44NPR94rKL7YsWJ4TDOo8QS583FiQ2/ckIB8HMINDlGEcF8hWUUEJKH6nv1qwDBUGMsv0KZvEZyMnQn8/ZbeMOeSZM0gadI3mzlTd8mcZDKUYCzYEla83yGIK4glkzlDqFj7aKnnmrHBDdBkGa7j/I5Lj47qOL030ZJlJegIH6Ny0BCCIJCWEUESVhKs2dQDqI0HlVAsURn7uA4zuqtBs0nQBN4dO4qg
+TmLOxW4KqUe8KG8CVf8JlJEgTMV7koCKQwTFMQPq0n9F37V8VmHIZ799Qv+XOcrBUW1RCz2BOsq/OsqoYRiVG8LhPWVclnDs1VGyRtPUuPbzO48HZiFcz9DWzER0l3FZsXwFxbHdnIGSiXxpyu0HJELr6C4DWVRfJn1Tzh33KG2WLQGiRCHOWqx2Da5cx42c+Uq6qt5FKMuM67s9DkUJEZteFUIxUlw5CdTVBsudxCqVOOTp2/rvLh11UmajzoduAs5+/tvupgmiJx3gWa+hRMxQusZzt2DDvsWAG2RvetY8Z47nu99m+cUW71k7P8acacPub8+9bht/hrWe/RT1wc9V9uPmBz+A2s/lH/ykbv+AYf/NYkFZUBaUBWVBWVlQFpQFZUF9Hn0HABLW/8nTYwQAAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Sweden">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAFIAAAAyCAYAAADP2IzBAAAA7klEQVR42u3YuQ6CQBhF4Xn/pzOyWChLIpgwojaKW/E7dFYIxSUxnOJQUVy+ihm3KRtTFuVH666pPW7JYM8uNt9mFhfe1JsUOSCBBBJIIIEEEkgggQQSSCCBBBJIIIEEEkgg/wwyDQ9lkyHD++pNilw/XNlqdxoN2bS5rbPW1JsUufc9MnW/EL8x59ijyI39SBoOSCCBBJKABBLIpUG+ws+kuik/5HPsUeTKw96UZVUdjojjEM+XreV1ZepNilxSeFPWn52nXFr0lxzqTYq4RuM+EkgggQQSSCCBBBJIIIEEEkgggQQSSCCBBHKZkB+lOafoscmuSQAAAABJRU5ErkJggg==</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Switzerland">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABCElEQVR42u3ZQQ6CMBAFUO5/Ml2ACSQYNaiXkA5QrFMqLtshEAPlL/6umekrLAaa0L0wMSQBBBBAANk3RF3ScK7piiFVbtTtZKg3htrOH/1mTLZySKcNEfnT6lggHSCAAAIIIHuB8AalGTYnhfCoMqX2PIjd3LN0eQhSFW4ECUJaXpvLan77hzBeyHDC3JR0705akhBijLSe7U1N8FUMQ1Q9FBJvcOk03Lt+LQFRgAACCCBbgzQxQOzT4G/s4A+FMdINSuvZ3ormQRwmled8lM9a5WFC7ey//7UwxgMCCCCAAALID9K7+ciXbgvXCvbEecjzhtcMa1d99cYnLQkuQwEBBBBAooB8AICIQzxbkAAzAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="UK">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAADkElEQVR42u2cW3PaMBCF9///tU4nTSAEEgglDeX2gjEGfJludWTMreYu2etUD2cyJkbe3c8GvEcyzTpdXvpzDpOEV2HIq9UqV2G44pkf8Ft3xN9rH/yj8clPL1DfqnCcTm/McRylcag4p4/P7D23Tgr76JzUe/BejJHG3LesT30c1Ai1Qs3COFaxxByMJuw1XlV8zW2s9aaOddZq83LqMW1eeO3wcuafBAMoiUpusVxy++e4EDDVAbIFgdqgRsmfRMcQDEY8fWpobWAcqTud26FsMPKBmAGR1Ta9Qq54Q9Fg5AIxC2IDJLpzANtg5AGxAyKrI82DhdEBTYORA8QuCNQNLMjmAUyAKR+IfRC7daKiD3gtmPKAlFMXKjsAeUDKrQNJC6g8IDLyJukB2gci6wQk6ZewPSAyP6JJ+peceSCyf8SQ9J+BD/VfxoBgLOk/80nyjRLGRMe01RneDQRjYCypIDZAMMC9wpn37bGnEw6CJcdJrFvOewnXX1Jh+6Gm280Lb6b3O9Xyz0BsXrsBSKZEx6XuiH8P9f/1OLV1XOrvpSCgKApVrgudM3JHDUzUknApmxKCa7aHPJxMVTFDDqNIF3w+GLL/3mO/+7GV2p69vfO8PziadC6kW4GoeFBov9NN1T2IR21fAiI9UUKdI3JFziZrSDgDTSs6TGgNJk/4XyFA1lBwhRyN5QyIvStE7WujdnRNMSToLiAVECHoKilivhgI9q1afpR9uVVJ52DsQqma6NLknIqRA+KAODkgDoiTA+KAODkg/wMQd2Mo7MbQtU6EtU5cc1FYc7GQ9vsp6ZZ4fETRPy1xq0CusAmstd9tGFSjtUF1FoQqmDaNcswiLCRKFxP5e1BsAoFZBtMsz0yDyabhAJpNg8q8hbvQ9uYlIGCX5tmoEGxWXCGwXU1dITgDYQsf/ThUBYetDHsZNrO3Yz1nVnQw
+HOnVULCpYVcbt3BNTHLoZJMcTiWcB6KeLe1qHiSc6IkI1iY5WIjT2CQHqSAKmQYkEAxJBVHoRDlBYEgqiFKmkgoAQ1JBlDrZukQwJBWEiOUIJeRNUkGIWrBTYB1IKgiRS9oKqAtJBSF60afFOqXLogXfKIleFm24bnpZtFQQlXpwgCEwUW77XQiISj5a404w2CapICr98Jk7wJBUEF/i8Uw3gKHF1EvbzXsgUhh42FYwnuh2M1rT7gFmNz7ALLzAF/Ln2v/5C1COMXtg4GFhAAAAAElFTkSuQmCC</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="UK_France">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAEAAAAAyCAYAAADsg90UAAAPDUlEQVR42u1Z13bjSg70/3/Z3Qm2JTErWpFBJBWYU22hScny3Nm9Z8/4be0zGFKMjeoCCmg+FfYKOCVAWaKsMqRNgX0UYmxN8arNMDG2mJgHmgvN9KBz37T3PL6CZi3xbB0wXx2BGghMG1fTwFXXEJomstMFQVLiu73BD2vPZ3q8x8XY2MCwt7DNNz7Xw6vt4pu1wb+MObZ7PuuUoVt7OI1M+IaN2PNRtx3Af2h7a9GglJf+4d9TuFhjNdZxXL6hvV6BqkJd9Y/eR2e8Oit8p7Ovzh6v5g4aBzsyuLVkf4+f9hJLDpbjgadbuJgWEg7a10yU5wQxAfipz6HbO1h0XuO9Iz7r2dnhu0kgtDdo4wXcXQxij+Pew8Z2sNV1ZO6e4yn4L1W+q79uMP7XKTT+FIDTFUVSwJ2usBubiGdkxOWKjiCUbY1MgKAjP8057Q0vdHzMWdc4mxPDxYszx3KzVwC4BCCamEjMGSJjhipOcLkUvI4A6CuY+oYM2nLGd/hBAP5FAIK1CyQV0jcX7sTGjgDG/h5tV/D9GWpusyxBmiZ3/+v2zx2/AyCO6dYKxaVCFxek3Bz7CR1ZrtCdL4oRTVmhajocwgteee3PCenPUDBI3zHZsVoeFAC+M0VsmThx9mKyoIkuuJxzjMwFxuaajNmSPWTTZIb1ykObE+vDHjvdgDcxUO34nLx/X05XT3WN6XqD55cJTnyW/JWdkH8gwSfg8DS2hdobvEwWmE63yM8cQJwhsBY4jAxcFCOIPgfT1Iw7vlQBIfmBszrRdnQmVABsGf+xY+Jq6YgIQhNfcL7keGae+Wmv8Z2Or7Y+uqJFtvNxHBtYW3yHUL0slPMMbGE95usQP/S1YsvEWCMKM+W1OH4H4DMYMGZMCgij6Z4xyYGSAdPpBiWp251SeNaM8WjguFqiJQ27pkZRVzJOvB0DArHGfO6p2dgz
+8R3p/JlO+UyENRkUX1P8NdLxtg+ZZIHQC7Ekzfd8Zr3dEowCTcPntQ2SusViw2eOVxjpB7ItYMj5eNE2iE/VB6+7rv0UGJ7GGimpL/GNM/qd4fCDsftsTPHt5xiWPUVyvuIahkxMFlac1cNywZi8IG0LnFAg4TgiZnuUDXyLGdt0CMAULp3MCUCSZUjSDOHBY7I1sWaeOHukf8lMz6muyapzmsLZbPHXWGPCnNHhlXL654TMpAp9f3EQxVnveDs43jafEgNPRdqizDvkKWc2b1EUDdKMMVjU3OZIJCGWwkvqQsJBUynq5MKB58ibnH4zWqtcUfhoWSr2Y8OBb05RxGd0DJ0qoboQSFzpRFYoya15PCeTKj43SVJkpH+aldwy8eZNP5aM21SM+aluccv9dy3smj8HIA/OKGg1rQpOKL2IvyOUR1oQ8ji37hGVd0Ttk8Z+gMrn70COBcgDn8dcdAyHo6njYtu4EISQMpht9+o5Oe9peW138NG4Pu8JkB1DWoQ05PkwVu8Uy+V4eOQ24HOp/7y34LskVMT5erDung3+EIAjqR+RdtHEQUgJi0TKDJrO/QnjmbQ9a5xV3UbAcz7Phdw/a9T7Ma+Tc3T4aPB6KkBsUL9ZEGVkwIlqEvC6gGEREJAjLWSYBJIrmANiTXLFcJzvDnVLnfP5jJhgnkVNNA0HjiOLY+Vypax7YMIfAnBlvF9JWZm1Kwd+IY1PzOZiqePwnEWTWWVs05ELk6LsX+lYrst9U5xpJ56Lee+FRcyVzhTaFBntwpwi51Nb7rOUOpx43XkomHKeywhoZvTPPXEMZ+abM5NoRpBSXufRCgnFDwogkvAJAJx0cZbaLbNn9rMY2ZLNzX6mOGOhxSTEhCgJTuI7NkXvHVLeRkSLrd5CzuaF5zIm00Sc13tgFDicxYQskRCRXCEJM7IXLJsJokabCMAzPmeqyujYoDwO2wPvy8+nBwmQye8+RwUCx4BL6XKp365j4cDBeRyc
+78zgctb2dHxHk63HwQU85skxsmM35/7U5m9LASYDl5m96MKmKQEa7hfakxkCpjx7z3u38kxrTrWYMmHOcWRJ7RmiHgwXvtsnUL4AxWfvaXkcifZ9XgFwA0Bl0qbpERVG1fdAU0WJ4lzF/0TExYpBEShfUhypc5WcyxHaPZMuRh/jXcxZYwXZqGv58KJ+v5fHVVVV0equP1/j3ZrbPs810v20g/T1CHxWMfQ0X+2xWvtYvflYLny8vYWqslstXCzmW2zXO1Q5M3BTomVTIo6W7BZDlsoxG6mIyqGcKGvOLsOHuUPyiABQEQCRuZzgZtzKfkkp9dS9S+TLtZLFlHI54+/ZeoslK8U5373bxByDj/U6UONIknwogAho131eJSjNzYit6kiXkvPAWv2Ab6MlxtMdfFaDhUwUK7WGep9dQmznFt4mIyTsHlnmwfcvWM02arZc0jZUsWurzC4AnE4n2HQ4oYy1nHmRM1ZSrPv3iFj47EcaTgcXVxZFFrd/MRlK1/mqyZg8POtbFmYr+GyRqyHvdx+6wj/uBY6s5w+w6bhGxzX7DS4LoDNflUsM1CxeAhcJZ9cbveI4X6FmkRKEBStIqdbWWLOTQ10yh2iMZSZVxndAR8owxelas6Zf4Qfb3gXZlfJeaWiKtu/2Tp6LPWXPf30FpBm65px9TgLzxzeW58+2B03f48L39bLfVwLNEKF4qIgbtUrQ4pEfvxPLxyKavcCaZSe7NXZ5EdtSFW4FsZY1AVLdnzFhUZP95RId6Xpli2sYCzq/IHPYrLAlflt6Kj735kQpSET6h1SLhr3E+Vqyv2C5bW0h7xqx7liwQEqZNyqRMZUbCtUVbqj5O+aPZM+iidXp5i3AaLLE83iGkM8ammHl6t2xBw9lfaD9DQC/EuXx2JPFrHukxkqlnbH/V4kuOque/vjKGZ2uUKYlAlLwxVjS8TeCtemdd9i0mAEBOKpk5VFNTgTgalqqoGoY25dLhmdm+bGzxYT3
+aXIvn/PC4mvJ3FMJ6LxXwKjIIgkHWVjxRiZqNlBgKbxcbTjGE90eMqQA1707A7wvkPTNcvsfAOjuxfQdAHG45Wx3rMszvsRbLLCjZkeUJZxZm7MN1UhficsX21XLVyO1Ze5g+/yqudisIjUuSYIhCx0pqEIWSg2BvF5SAjDjPXTelhwjQOxp3GcrrY/nWLMDTHi/5BvpEdgIoNjt4LFS3Bt989S1Qv3mfRVo8KK8F8S3MqlRIfJQLj3s9T1EdwuCTgFAqp/OCGZzbDV2e9Togv1/HF0w5iwJBceMc41JUjq0Z8b9K52Q+H9hK/w8XpMBvuoG91QAKXIiYZW54HMzXBgCz5zxsXMY1gP7tcEXxrVuh9DMDcYC8HiB9S5iCiDo7BQZh0DOTpQt83qiqX5BBtx07XsSbHsA+sUROt/VD9b2dcMNgu7WPA0aK7+pTk85O7uIL8lIvVZewnMBm5KVG2B9PGMXXLB3T3APMYIj970YO/72g5QKkOHgX3GKU/WwhE1RzgYmfttjwbjdrY5YUc5eqTSv5oHOu8pGJrfs88eGT2ZQfcw988oBprGDy6YsbWqqQsaygd0nu8wuLdAw/9SUWlkcreisYgrzh4StrCClexcVraQfuUvzfGRub7nroeBxsYxJN/Vcdaxki/7UKXFpbkutH4KmvZ+5pZeHBDMwrn7MrQPy6SmHMX6DLrJqysKGB92R2Q7IAprtq9XgMfdfHZHhHpjpPFT1TsGWuKSzBYuunAyVBZiMv6WWyORYnjNHU6OyBIUUYWnOcnuKnKGWcnulCl3sOXuKBbcst7mfsIdRxx32Lo5cM1Ml+1MvKc29+HqkV99s1Nyt+D9zxSN97vH0KC59dj7GuaorlIMy084RY3GeplvcF8kVEOS8rEY5nrrOXhz7ApMAdLS26EFImRyvlWwr5XBJ5ysypGbtkMlSWlay/Kbq0KGGjpZ0OKPjYjmtsGg8VojTTm/yu2aYPnUf0gc+Lj8P9Wjf
+gT/Ky8OixD3FvOfg4CxxLzMf0sEAYzorYEwGENSKstUf05gMZTsyPALg99UxnWqlcGI+qAmAOJyLswRBtgWdl2Mlr0sIDtJM9R4CQG3NBkfnyJ0bCL3zBRmQOb0JABV7kSf8TSO7u7P/rdD6mF3fBUYgORKAF6G/FSrnJOmNB4cVEJY37B/VxxYBZUwAHJbAsjaY1wnFKVfO14XEfqZM0V5MAcBCirF/blmi5xmbsClnVJzqHUxlpqdzBYQCQznv8JjDc9M7C54+1ke3Tqj+7WJDdweou4vJx+t6MOJTQYlzOePRMOOuAmFENoi9A3JU24lJoIwA08WBVWJFAK6M+4KzTcoPX6wqAaHIlQkQlTCjaAhAoQC4KABmdwCUg8pxsZkCIBcAlE3VsbJnQPeQ7h5bsb9XU48AvIdE87hUqy46xQWlU74CxUyER+hmD4CEQx8S7gBCgBdH8kTMEDgqBlTM6kXVJ7eslCaquVO/FDBoEiI1q9WqaHFtqBLZOwDlIwCK+j39bwAos6fqmAKgw++Xl7t/KCO7O+HrjwDIB407AGfKW9h/QOFM/w6An9OA9X6MF7LFXlCaOlkspQSWskArVXKnmCAgZNzm3BYDGI8ASAiUVh/n7xTvQegT3xACDwwYQqD7m8ePXOj+CZEPHyh7NkXnnIUOQ8A4KQa8A3DsAVAfSX2VFJ8dHrdOZEBEBvgDACkBaNS3EnFS0b0s34FgeKjQoEokNwCs6ZD8pkim7wDkAwAKlKlzT4IqNzBBPv1u5tsPOf6f+s76lyTYsI1O8UPpf9xLH0NAsr6owki6z5saSOyz25uYMSZ6hNncY21DmauupDm3dF4SXXlLflITiFW9KuRKGgulAsKAXwEohxB4Z8C0D4UBmFwBcC96ROXrQevrX2C41de/yxHNQxbp1DPcJME3S1rZSDkrn9Ql8/eq0BdEwgzJEeqTu2y1CIuZpxZemvJMy5XzQvdeFdIh9ntVEBBuueEmgxIC
+uX2TuRklsZe6Ww4o7jbkB+s3DPhf/z6KZf8rlA+iutT8kXK4rwP8+8zL9qMkHlUStBeB+girZI4OFsOMi+RVDwyQmS+H4wmLoy7LmQQdOss+xnaGGRfH+wLorgL3kJgPOWD6BcAXAF8AfAHwBcAXAF8AfAHwBcAXAF8AfAHwBcAXAF8AfAHw/wfAvwGj0oWnu+JsvAAAAABJRU5ErkJggg==</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="UK_Germany">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="UK_Sweden_France">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="USA">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="USA_Russia">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>f3383f9c-0338-44e3-b9d0-714ccf8c7a2b</rd:ReportID>
+</Report>
