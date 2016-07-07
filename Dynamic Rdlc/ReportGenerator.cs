@@ -25,7 +25,7 @@ namespace DynamicRdlc
 
         public virtual void Run()
         {
-            ////this.Report.Element.Save(Console.Out);  // Uncomment this to show the entire RDLC in the Output window.
+            Report.Element.Save(Console.Out);  // Uncomment this to show the entire RDLC in the Output window.
             LoadReportDefinition();
         }
 

@@ -70,7 +70,7 @@ namespace PeriodicTable
 
         private static TablixRow CreateThirdTablixRow()
         {
-            var textRun = new TextRun {Value = CreateHyperLinkExpression(), MarkupType = MarkupType.Html};
+            var textRun = new TextRun {Value = CreateHyperLinkExpression(), MarkupType = MarkupType.HTML};
             var paragraph = new Paragraph(new TextRuns(textRun)) {TextAlign = TextAlign.Center};
             var textbox = new Textbox(paragraph) {TextboxStyle = new TextboxStyle()};
             var tablixCells = new TablixCells(new TablixCell(new CellContents(textbox)));

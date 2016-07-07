@@ -1,4 +1,6 @@
-﻿namespace DynamicRdlc.Rdl
+﻿using System.Globalization;
+
+namespace DynamicRdlc.Rdl
 {
     public class Inch
     {
@@ -26,6 +28,6 @@
 
         public static Inch CentiInchToInch(int centiInch) => new Inch(centiInch*HundredthOfInches);
 
-        public override string ToString() => Value.ToString("0.###########") + Unit;
+        public override string ToString() => Value.ToString("0.###########", CultureInfo.InvariantCulture) + Unit;
     }
 }
