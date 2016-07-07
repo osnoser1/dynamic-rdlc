@@ -1,7 +1,7 @@
-﻿namespace PeriodicTable
-{
-    using PeriodicTable.Report.Rdl;
+﻿using DynamicRdlc.Rdl;
 
+namespace PeriodicTable
+{
     public class SubTable
     {
         public static ReportItem Create(string dataSetName)

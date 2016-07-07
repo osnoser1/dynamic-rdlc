@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB68135F-6725-435C-A29A-5AF5E539C67A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DynamicRdlc</RootNamespace>
+    <AssemblyName>Dynamic Rdlc</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rdl\BackgroundImage.cs" />
+    <Compile Include="Rdl\BackgroundRepeat.cs" />
+    <Compile Include="Rdl\Body.cs" />
+    <Compile Include="Rdl\Border.cs" />
+    <Compile Include="Rdl\BorderStyle.cs" />
+    <Compile Include="Rdl\BottomBorder.cs" />
+    <Compile Include="Rdl\CellContents.cs" />
+    <Compile Include="Rdl\CollectionOf.cs" />
+    <Compile Include="Rdl\DataSet.cs" />
+    <Compile Include="Rdl\DataSets.cs" />
+    <Compile Include="Rdl\DataSources.cs" />
+    <Compile Include="Rdl\EmbeddedImage.cs" />
+    <Compile Include="Rdl\EmbeddedImages.cs" />
+    <Compile Include="Rdl\Expression.cs" />
+    <Compile Include="Rdl\FontWeight.cs" />
+    <Compile Include="Rdl\Group.cs" />
+    <Compile Include="Rdl\GroupExpression.cs" />
+    <Compile Include="Rdl\GroupExpressions.cs" />
+    <Compile Include="Rdl\IElement.cs" />
+    <Compile Include="Rdl\Inch.cs" />
+    <Compile Include="Rdl\LeftBorder.cs" />
+    <Compile Include="Rdl\MarkupType.cs" />
+    <Compile Include="Rdl\Page.cs" />
+    <Compile Include="Rdl\Paragraph.cs" />
+    <Compile Include="Rdl\Paragraphs.cs" />
+    <Compile Include="Rdl\ParentOf.cs" />
+    <Compile Include="Rdl\Point.cs" />
+    <Compile Include="Rdl\RdlColor.cs" />
+    <Compile Include="Rdl\Rectangle.cs" />
+    <Compile Include="Rdl\Report.cs" />
+    <Compile Include="Rdl\ReportItem.cs" />
+    <Compile Include="Rdl\ReportItems.cs" />
+    <Compile Include="Rdl\ReportItemsContainer.cs" />
+    <Compile Include="Rdl\ReportSection.cs" />
+    <Compile Include="Rdl\ReportSections.cs" />
+    <Compile Include="Rdl\RightBorder.cs" />
+    <Compile Include="Rdl\SortExpression.cs" />
+    <Compile Include="Rdl\SortExpressions.cs" />
+    <Compile Include="Rdl\Source.cs" />
+    <Compile Include="Rdl\Style.cs" />
+    <Compile Include="Rdl\Tablix.cs" />
+    <Compile Include="Rdl\TablixBody.cs" />
+    <Compile Include="Rdl\TablixCell.cs" />
+    <Compile Include="Rdl\TablixCells.cs" />
+    <Compile Include="Rdl\TablixColumn.cs" />
+    <Compile Include="Rdl\TablixColumnHierarchy.cs" />
+    <Compile Include="Rdl\TablixColumns.cs" />
+    <Compile Include="Rdl\TablixCorner.cs" />
+    <Compile Include="Rdl\TablixCornerCell.cs" />
+    <Compile Include="Rdl\TablixCornerRow.cs" />
+    <Compile Include="Rdl\TablixCornerRows.cs" />
+    <Compile Include="Rdl\TablixHeader.cs" />
+    <Compile Include="Rdl\TablixMember.cs" />
+    <Compile Include="Rdl\TablixMembers.cs" />
+    <Compile Include="Rdl\TablixRow.cs" />
+    <Compile Include="Rdl\TablixRowHierarchy.cs" />
+    <Compile Include="Rdl\TablixRows.cs" />
+    <Compile Include="Rdl\TextAlign.cs" />
+    <Compile Include="Rdl\Textbox.cs" />
+    <Compile Include="Rdl\TextboxStyle.cs" />
+    <Compile Include="Rdl\TextRun.cs" />
+    <Compile Include="Rdl\TextRuns.cs" />
+    <Compile Include="Rdl\TopBorder.cs" />
+    <Compile Include="Rdl\TypeExtension.cs" />
+    <Compile Include="Rdl\Value.cs" />
+    <Compile Include="Rdl\VerticalAlign.cs" />
+    <Compile Include="Rdl\Width.cs" />
+    <Compile Include="ReportGenerator.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

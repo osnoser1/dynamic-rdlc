@@ -1,9 +1,11 @@
-﻿namespace PeriodicTable
+﻿using DynamicRdlc;
+using DynamicRdlc.Rdl;
+
+namespace PeriodicTable
 {
     using Microsoft.Reporting.WinForms;
 
-    using PeriodicTable.Properties;
-    using PeriodicTable.Report.Rdl;
+    using Properties;
 
     public class PeriodicTableReportGenerator : ReportGenerator
     {
