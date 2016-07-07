@@ -4,32 +4,17 @@ namespace DynamicRdlc.Rdl
 {
     public class TablixColumnHierarchy
     {
-        private readonly TablixMembers tablixMembers;
+        private readonly TablixMembers _tablixMembers;
 
         public TablixColumnHierarchy(TablixMembers tablixMembers)
         {
-            this.tablixMembers = tablixMembers;
+            _tablixMembers = tablixMembers;
         }
 
-        public Inch Height
-        {
-            get
-            {
-                return this.tablixMembers.Size;
-            }
-        }
+        public Inch Height => _tablixMembers.Size;
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
-        private XElement Build()
-        {
-            return new XElement(typeof(TablixColumnHierarchy).GetShortName(), this.tablixMembers.Element);
-        }
+        private XElement Build() => new XElement(typeof(TablixColumnHierarchy).GetShortName(), _tablixMembers.Element);
     }
 }

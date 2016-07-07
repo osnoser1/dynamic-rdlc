@@ -4,27 +4,27 @@ namespace DynamicRdlc.Rdl
 {
     public class Rectangle : ReportItemsContainer
     {
-        private static int index;
-        private readonly string name;
-        private readonly string rdlName;
+        private static int _index;
+        private readonly string _name;
+        private readonly string _rdlName;
 
         public Rectangle()
         {
-            this.rdlName = typeof(Rectangle).GetShortName();
-            this.name = this.rdlName + ++index;
+            _rdlName = typeof(Rectangle).GetShortName();
+            _name = _rdlName + ++_index;
         }
 
         protected override XElement Build()
         {
             var result = new XElement(
-                this.rdlName,
-                new XAttribute("Name", this.name),
+                _rdlName,
+                new XAttribute("Name", _name),
                 new XElement("KeepTogether", true),
-                this.ReportItems.Element);
-            this.ConfigureTop(result);
-            this.ConfigureLeft(result);
-            this.ConfigureWidth(result);
-            this.ConfigureContainerHeight(result);
+                ReportItems.Element);
+            ConfigureTop(result);
+            ConfigureLeft(result);
+            ConfigureWidth(result);
+            ConfigureContainerHeight(result);
 
             return result;
         }

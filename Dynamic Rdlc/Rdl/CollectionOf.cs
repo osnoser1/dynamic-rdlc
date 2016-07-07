@@ -7,36 +7,27 @@ namespace DynamicRdlc.Rdl
     {
         protected CollectionOf()
         {
-            this.Collection = new List<T>();
+            Collection = new List<T>();
         }
 
         protected CollectionOf(T item)
             : this()
         {
-            this.Add(item);
+            Add(item);
         }
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
-        protected List<T> Collection { get; private set; }
+        protected List<T> Collection { get; }
 
-        public void Add(T item)
-        {
-            this.Collection.Add(item);
-        }
+        public void Add(T item) => Collection.Add(item);
 
         protected abstract string GetRdlName();
 
         protected virtual XElement Build()
         {
-            var result = new XElement(this.GetRdlName());
-            foreach (var item in this.Collection)
+            var result = new XElement(GetRdlName());
+            foreach (var item in Collection)
             {
                 result.Add(item.Element);
             }

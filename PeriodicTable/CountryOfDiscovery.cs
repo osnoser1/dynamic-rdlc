@@ -22,6 +22,6 @@
         UkGermany,
         UkSwedenFrance,
         Usa,
-        UsaRussia,
+        UsaRussia
     }
 }

@@ -4,30 +4,21 @@ namespace DynamicRdlc.Rdl
 {
     public class TablixHeader : IElement
     {
-        private readonly CellContents cellContents;
+        private readonly CellContents _cellContents;
 
         public TablixHeader(Inch size, CellContents cellContents)
         {
-            this.Size = size;
-            this.cellContents = cellContents;
+            Size = size;
+            _cellContents = cellContents;
         }
 
-        public Inch Size { get; private set; }
+        public Inch Size { get; }
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
-        private XElement Build()
-        {
-            return new XElement(
-                typeof(TablixHeader).GetShortName(),
-                new XElement("Size", this.Size),
-                this.cellContents.Element);
-        }
+        private XElement Build() => new XElement(
+            typeof(TablixHeader).GetShortName(),
+            new XElement("Size", Size),
+            _cellContents.Element);
     }
 }

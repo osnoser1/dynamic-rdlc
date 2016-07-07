@@ -1,22 +1,21 @@
-﻿namespace PeriodicTable
+﻿using System;
+using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
+
+namespace PeriodicTable
 {
-    using System;
-    using System.Windows.Forms;
-
-    using Microsoft.Reporting.WinForms;
-
     public partial class Form2 : Form
     {
         public Form2()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            var rv = new ReportViewer { Dock = DockStyle.Fill };
+            var rv = new ReportViewer {Dock = DockStyle.Fill};
             rv.LocalReport.ReportEmbeddedResource = "PeriodicTable.Report.Report1.rdlc";
-            this.Controls.Add(rv);
+            Controls.Add(rv);
 
             rv.LocalReport.DataSources.Add(
                 new ReportDataSource("DataSet1", MainTableDataSource.Create()));

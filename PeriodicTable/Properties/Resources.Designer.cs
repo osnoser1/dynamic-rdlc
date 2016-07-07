@@ -8,10 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.Drawing;
+using System.Globalization;
+using System.Resources;
+using System.Runtime.CompilerServices;
+
 namespace PeriodicTable.Properties {
-    using System;
-    
-    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,27 +25,27 @@ namespace PeriodicTable.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [GeneratedCode("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [DebuggerNonUserCode()]
+    [CompilerGenerated()]
     internal class Resources {
         
-        private static global::System.Resources.ResourceManager resourceMan;
+        private static ResourceManager resourceMan;
         
-        private static global::System.Globalization.CultureInfo resourceCulture;
+        private static CultureInfo resourceCulture;
         
-        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        internal static ResourceManager ResourceManager {
             get {
-                if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PeriodicTable.Properties.Resources", typeof(Resources).Assembly);
+                if (ReferenceEquals(resourceMan, null)) {
+                    ResourceManager temp = new ResourceManager("PeriodicTable.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -50,8 +56,8 @@ namespace PeriodicTable.Properties {
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        internal static CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,210 +69,210 @@ namespace PeriodicTable.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Aristotle {
+        internal static Bitmap Aristotle {
             get {
                 object obj = ResourceManager.GetObject("Aristotle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Aristotle_Germany {
+        internal static Bitmap Aristotle_Germany {
             get {
                 object obj = ResourceManager.GetObject("Aristotle_Germany", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Austria {
+        internal static Bitmap Austria {
             get {
                 object obj = ResourceManager.GetObject("Austria", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Denmark {
+        internal static Bitmap Denmark {
             get {
                 object obj = ResourceManager.GetObject("Denmark", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Finland {
+        internal static Bitmap Finland {
             get {
                 object obj = ResourceManager.GetObject("Finland", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap France {
+        internal static Bitmap France {
             get {
                 object obj = ResourceManager.GetObject("France", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Germany {
+        internal static Bitmap Germany {
             get {
                 object obj = ResourceManager.GetObject("Germany", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Germany_Sweden {
+        internal static Bitmap Germany_Sweden {
             get {
                 object obj = ResourceManager.GetObject("Germany_Sweden", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Italy {
+        internal static Bitmap Italy {
             get {
                 object obj = ResourceManager.GetObject("Italy", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap NoBackground {
+        internal static Bitmap NoBackground {
             get {
                 object obj = ResourceManager.GetObject("NoBackground", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Romania {
+        internal static Bitmap Romania {
             get {
                 object obj = ResourceManager.GetObject("Romania", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Russia {
+        internal static Bitmap Russia {
             get {
                 object obj = ResourceManager.GetObject("Russia", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Spain {
+        internal static Bitmap Spain {
             get {
                 object obj = ResourceManager.GetObject("Spain", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Sweden {
+        internal static Bitmap Sweden {
             get {
                 object obj = ResourceManager.GetObject("Sweden", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Switzerland {
+        internal static Bitmap Switzerland {
             get {
                 object obj = ResourceManager.GetObject("Switzerland", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap UK {
+        internal static Bitmap UK {
             get {
                 object obj = ResourceManager.GetObject("UK", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap UK_France {
+        internal static Bitmap UK_France {
             get {
                 object obj = ResourceManager.GetObject("UK_France", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap UK_Germany {
+        internal static Bitmap UK_Germany {
             get {
                 object obj = ResourceManager.GetObject("UK_Germany", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap UK_Sweden_France {
+        internal static Bitmap UK_Sweden_France {
             get {
                 object obj = ResourceManager.GetObject("UK_Sweden_France", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap USA {
+        internal static Bitmap USA {
             get {
                 object obj = ResourceManager.GetObject("USA", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap USA_Russia {
+        internal static Bitmap USA_Russia {
             get {
                 object obj = ResourceManager.GetObject("USA_Russia", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((Bitmap)(obj));
             }
         }
     }

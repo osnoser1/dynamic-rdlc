@@ -7,9 +7,6 @@
         {
         }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(Value).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(Value).GetShortName();
     }
 }

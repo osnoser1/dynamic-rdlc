@@ -4,12 +4,9 @@
     {
         public SortExpressions(SortExpression sortExpression)
             : base(sortExpression)
-        {            
+        {
         }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(SortExpressions).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(SortExpressions).GetShortName();
     }
 }

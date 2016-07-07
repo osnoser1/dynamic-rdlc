@@ -10,7 +10,7 @@ namespace DynamicRdlc.Rdl
 
         public TablixRows(TablixRow tablixRow)
         {
-            this.Add(tablixRow);
+            Add(tablixRow);
         }
 
         public Inch Height
@@ -18,13 +18,10 @@ namespace DynamicRdlc.Rdl
             get
             {
                 var result = new Inch(0);
-                return this.Collection.Aggregate(result, (current, tablixRow) => current + tablixRow.Height);
+                return Collection.Aggregate(result, (current, tablixRow) => current + tablixRow.Height);
             }
         }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(TablixRows).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(TablixRows).GetShortName();
     }
 }

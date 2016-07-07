@@ -4,42 +4,22 @@ namespace DynamicRdlc.Rdl
 {
     public class TablixBody
     {
-        private readonly TablixColumns tablixColumns;
-        private readonly TablixRows tablixRows;
+        private readonly TablixColumns _tablixColumns;
+        private readonly TablixRows _tablixRows;
 
         public TablixBody(TablixColumns tablixColumns, TablixRows tablixRows)
         {
-            this.tablixColumns = tablixColumns;
-            this.tablixRows = tablixRows;
+            _tablixColumns = tablixColumns;
+            _tablixRows = tablixRows;
         }
 
-        public Inch Height
-        {
-            get
-            {
-                return this.tablixRows.Height;
-            }
-        }
+        public Inch Height => _tablixRows.Height;
 
-        public Inch Width
-        {
-            get
-            {
-                return this.tablixColumns.Width;
-            }
-        }
+        public Inch Width => _tablixColumns.Width;
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
         private XElement Build()
-        {
-            return new XElement(typeof(TablixBody).GetShortName(), this.tablixColumns.Element, this.tablixRows.Element);
-        }
+            => new XElement(typeof(TablixBody).GetShortName(), _tablixColumns.Element, _tablixRows.Element);
     }
 }

@@ -2,16 +2,13 @@
 {
     public class Point
     {
-        private readonly double point;
+        private readonly double _point;
 
         public Point(double point)
         {
-            this.point = point;
+            _point = point;
         }
 
-        public override string ToString()
-        {
-            return this.point + "pt";
-        }
+        public override string ToString() => _point + "pt";
     }
 }

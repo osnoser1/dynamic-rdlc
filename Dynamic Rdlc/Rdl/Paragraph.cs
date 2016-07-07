@@ -11,15 +11,12 @@ namespace DynamicRdlc.Rdl
 
         public TextAlign TextAlign { get; set; }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(Paragraph).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(Paragraph).GetShortName();
 
         protected override XElement Build()
         {
             var result = base.Build();
-            result.Add(this.BuildStyle());
+            result.Add(BuildStyle());
             return result;
         }
 
@@ -27,9 +24,9 @@ namespace DynamicRdlc.Rdl
         {
             var result = new XElement("Style");
 
-            if (this.TextAlign != TextAlign.Default)
+            if (TextAlign != TextAlign.Default)
             {
-                result.Add(new XElement("TextAlign", this.TextAlign));
+                result.Add(new XElement("TextAlign", TextAlign));
             }
 
             return result.HasElements ? result : null;

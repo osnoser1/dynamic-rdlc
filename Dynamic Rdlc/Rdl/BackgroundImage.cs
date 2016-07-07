@@ -4,32 +4,23 @@ namespace DynamicRdlc.Rdl
 {
     public class BackgroundImage : IElement
     {
-        private readonly Source source;
-        private readonly BackgroundRepeat backgroundRepeat;
-        private readonly string value;
+        private readonly BackgroundRepeat _backgroundRepeat;
+        private readonly Source _source;
+        private readonly string _value;
 
         public BackgroundImage(Source source, BackgroundRepeat backgroundRepeat, string value)
         {
-            this.source = source;
-            this.backgroundRepeat = backgroundRepeat;
-            this.value = value;
+            _source = source;
+            _backgroundRepeat = backgroundRepeat;
+            _value = value;
         }
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
-        private XElement Build()
-        {
-            return new XElement(
-                typeof(BackgroundImage).GetShortName(),
-                new XElement("Source", this.source),
-                new XElement("BackgroundRepeat", this.backgroundRepeat),
-                new XElement("Value", this.value));
-        }
+        private XElement Build() => new XElement(
+            typeof(BackgroundImage).GetShortName(),
+            new XElement("Source", _source),
+            new XElement("BackgroundRepeat", _backgroundRepeat),
+            new XElement("Value", _value));
     }
 }

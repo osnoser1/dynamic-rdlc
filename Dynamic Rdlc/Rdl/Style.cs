@@ -18,80 +18,74 @@ namespace DynamicRdlc.Rdl
 
         public BackgroundImage BackgroundImage { get; set; }
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
         protected virtual XElement Build()
         {
             var result = new XElement(typeof(Style).GetShortName());
-            this.ConfigureBorder(result);
-            this.ConfigureTopBorder(result);
-            this.ConfigureBottomBorder(result);
-            this.ConfigureLeftBorder(result);
-            this.ConfigureRightBorder(result);
-            this.ConfigureBackgroundColor(result);
-            this.ConfigureBackgroundImage(result);
+            ConfigureBorder(result);
+            ConfigureTopBorder(result);
+            ConfigureBottomBorder(result);
+            ConfigureLeftBorder(result);
+            ConfigureRightBorder(result);
+            ConfigureBackgroundColor(result);
+            ConfigureBackgroundImage(result);
             return result;
         }
 
         private void ConfigureBorder(XElement style)
         {
-            if (this.Border != null)
+            if (Border != null)
             {
-                style.Add(this.Border.Element);
+                style.Add(Border.Element);
             }
         }
 
         private void ConfigureTopBorder(XElement style)
         {
-            if (this.TopBorder != null)
+            if (TopBorder != null)
             {
-                style.Add(this.TopBorder.Element);
+                style.Add(TopBorder.Element);
             }
         }
 
         private void ConfigureBottomBorder(XElement style)
         {
-            if (this.BottomBorder != null)
+            if (BottomBorder != null)
             {
-                style.Add(this.BottomBorder.Element);
+                style.Add(BottomBorder.Element);
             }
         }
 
         private void ConfigureLeftBorder(XElement style)
         {
-            if (this.LeftBorder != null)
+            if (LeftBorder != null)
             {
-                style.Add(this.LeftBorder.Element);
+                style.Add(LeftBorder.Element);
             }
         }
 
         private void ConfigureRightBorder(XElement style)
         {
-            if (this.RightBorder != null)
+            if (RightBorder != null)
             {
-                style.Add(this.RightBorder.Element);
+                style.Add(RightBorder.Element);
             }
         }
 
         private void ConfigureBackgroundColor(XElement style)
         {
-            if (this.BackgroundColor != null)
+            if (BackgroundColor != null)
             {
-                style.Add(new XElement("BackgroundColor", this.BackgroundColor));
+                style.Add(new XElement("BackgroundColor", BackgroundColor));
             }
         }
 
         private void ConfigureBackgroundImage(XElement style)
         {
-            if (this.BackgroundImage != null)
+            if (BackgroundImage != null)
             {
-                style.Add(this.BackgroundImage.Element);
+                style.Add(BackgroundImage.Element);
             }
         }
     }

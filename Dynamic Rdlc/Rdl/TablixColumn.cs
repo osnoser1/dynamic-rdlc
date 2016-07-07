@@ -7,17 +7,8 @@
         {
         }
 
-        public Inch Width
-        {
-            get
-            {
-                return this.Item.Value;
-            }
-        }
+        public Inch Width => Item.Value;
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(TablixColumn).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(TablixColumn).GetShortName();
     }
 }

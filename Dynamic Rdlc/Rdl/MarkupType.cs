@@ -3,6 +3,6 @@
     public enum MarkupType
     {
         None,
-        HTML
+        Html
     }
 }

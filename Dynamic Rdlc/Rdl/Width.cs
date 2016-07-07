@@ -7,17 +7,8 @@
         {
         }
 
-        public Inch Value
-        {
-            get
-            {
-                return this.Item;
-            }
-        }
+        public Inch Value => Item;
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(Width).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(Width).GetShortName();
     }
 }

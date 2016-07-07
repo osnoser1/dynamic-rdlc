@@ -4,20 +4,7 @@ namespace DynamicRdlc.Rdl
 {
     public abstract class ReportItem : IElement
     {
-        private Inch top = new Inch(0);
-
-        public Inch Top
-        {
-            get
-            {
-                return this.top;
-            }
-
-            set
-            {
-                this.top = value;
-            }
-        }
+        public Inch Top { get; set; } = new Inch(0);
 
         public Inch Left { get; set; }
 
@@ -25,53 +12,41 @@ namespace DynamicRdlc.Rdl
 
         public Inch Width { get; set; }
 
-        public Inch NextTop
-        {
-            get
-            {
-                return this.Top + this.Height;
-            }
-        }
+        public Inch NextTop => Top + Height;
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
         protected abstract XElement Build();
 
         protected void ConfigureTop(XElement item)
         {
-            if (this.Top.ToString() != new Inch(0).ToString())
+            if (Top.ToString() != new Inch(0).ToString())
             {
-                item.Add(new XElement("Top", this.Top));
+                item.Add(new XElement("Top", Top));
             }
         }
 
         protected void ConfigureLeft(XElement item)
         {
-            if (this.Left != null)
+            if (Left != null)
             {
-                item.Add(new XElement("Left", this.Left));
+                item.Add(new XElement("Left", Left));
             }
         }
 
         protected void ConfigureHeight(XElement item)
         {
-            if (this.Height != null)
+            if (Height != null)
             {
-                item.Add(new XElement("Height", this.Height));
+                item.Add(new XElement("Height", Height));
             }
         }
 
         protected void ConfigureWidth(XElement item)
         {
-            if (this.Width != null)
+            if (Width != null)
             {
-                item.Add(new XElement("Width", this.Width));
+                item.Add(new XElement("Width", Width));
             }
         }
     }

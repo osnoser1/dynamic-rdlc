@@ -7,35 +7,35 @@ namespace DynamicRdlc
 {
     public class ReportGenerator
     {
-        protected readonly Report Report = new Report();
         protected readonly ReportDataSourceCollection DataSources;
 
-        private readonly LocalReport localReport;
+        private readonly LocalReport _localReport;
+        protected readonly Report Report = new Report();
 
         public ReportGenerator(LocalReport localReport)
         {
             if (localReport == null)
             {
-                throw new ArgumentNullException("localReport");
+                throw new ArgumentNullException(nameof(localReport));
             }
 
-            this.localReport = localReport;
-            this.DataSources = localReport.DataSources;
+            _localReport = localReport;
+            DataSources = localReport.DataSources;
         }
 
         public virtual void Run()
         {
             ////this.Report.Element.Save(Console.Out);  // Uncomment this to show the entire RDLC in the Output window.
-            this.LoadReportDefinition();
+            LoadReportDefinition();
         }
 
         private void LoadReportDefinition()
         {
             using (var stream = new MemoryStream())
             {
-                this.Report.Element.Save(stream);
+                Report.Element.Save(stream);
                 stream.Position = 0;
-                this.localReport.LoadReportDefinition(stream);
+                _localReport.LoadReportDefinition(stream);
             }
         }
     }

@@ -6,25 +6,16 @@ namespace DynamicRdlc.Rdl
     {
         public const string DataSourceName = "Elements";
 
-        public XElement Element
-        {
-            get
-            {
-                return Build();
-            }
-        }
+        public XElement Element => Build();
 
-        private static XElement Build()
-        {
-            return new XElement(
-                typeof(DataSources).GetShortName(),
+        private static XElement Build() => new XElement(
+            typeof(DataSources).GetShortName(),
+            new XElement(
+                "DataSource",
+                new XAttribute("Name", DataSourceName),
                 new XElement(
-                    "DataSource",
-                    new XAttribute("Name", DataSourceName),
-                    new XElement(
-                        "ConnectionProperties",
-                        new XElement("DataProvider", "ListOfT"),
-                        new XElement("ConnectString"))));
-        }
+                    "ConnectionProperties",
+                    new XElement("DataProvider", "ListOfT"),
+                    new XElement("ConnectString"))));
     }
 }

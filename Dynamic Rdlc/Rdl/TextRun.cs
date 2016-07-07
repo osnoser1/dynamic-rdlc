@@ -16,19 +16,13 @@ namespace DynamicRdlc.Rdl
 
         public MarkupType MarkupType { get; set; }
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
         private XElement Build()
         {
-            var result = new XElement(typeof(TextRun).GetShortName(), new XElement("Value", this.Value));
-            this.ConfigureMarkupType(result);
-            this.ConfigureStyle(result);
+            var result = new XElement(typeof(TextRun).GetShortName(), new XElement("Value", Value));
+            ConfigureMarkupType(result);
+            ConfigureStyle(result);
             return result;
         }
 
@@ -36,24 +30,24 @@ namespace DynamicRdlc.Rdl
         {
             var style = new XElement("Style");
 
-            if (this.FontFamily != null)
+            if (FontFamily != null)
             {
-                style.Add(new XElement("FontFamily", this.FontFamily));
+                style.Add(new XElement("FontFamily", FontFamily));
             }
 
-            if (this.FontSize != null)
+            if (FontSize != null)
             {
-                style.Add(new XElement("FontSize", this.FontSize));
+                style.Add(new XElement("FontSize", FontSize));
             }
 
-            if (this.FontWeight != FontWeight.Default)
+            if (FontWeight != FontWeight.Default)
             {
-                style.Add(new XElement("FontWeight", this.FontWeight));
+                style.Add(new XElement("FontWeight", FontWeight));
             }
 
-            if (this.Color != null)
+            if (Color != null)
             {
-                style.Add(new XElement("Color", this.Color));
+                style.Add(new XElement("Color", Color));
             }
 
             if (style.HasElements)
@@ -64,9 +58,9 @@ namespace DynamicRdlc.Rdl
 
         private void ConfigureMarkupType(XElement textRun)
         {
-            if (this.MarkupType != MarkupType.None)
+            if (MarkupType != MarkupType.None)
             {
-                textRun.Add(new XElement("MarkupType", this.MarkupType));
+                textRun.Add(new XElement("MarkupType", MarkupType));
             }
         }
     }

@@ -2,12 +2,6 @@
 {
     public class BottomBorder : Border
     {
-        protected override string BorderName
-        {
-            get
-            {
-                return "Bottom" + base.BorderName;
-            }
-        }
+        protected override string BorderName => "Bottom" + base.BorderName;
     }
 }

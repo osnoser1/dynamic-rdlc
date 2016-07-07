@@ -2,81 +2,63 @@
 {
     public class ElementProperty
     {
-        private static string group;
-        private static string period;
-        private static string atomicNumber;
-        private static string state;
-        private static string chemicalSymbol;
-        private static string url;
-        private static string name;
-        private static string massUncertainty;
-        private static string relativeAtomicMass;
-        private static string naturalOccurrence;
-        private static string countryOfDiscovery;
-        private static string chemicalProperty;
+        private static string _group;
+        private static string _period;
+        private static string _atomicNumber;
+        private static string _state;
+        private static string _chemicalSymbol;
+        private static string _url;
+        private static string _name;
+        private static string _massUncertainty;
+        private static string _relativeAtomicMass;
+        private static string _naturalOccurrence;
+        private static string _countryOfDiscovery;
+        private static string _chemicalProperty;
 
         public static string Group
         {
-            get
-            {
-                return group ?? (group = ReflectOn<Element>.GetProperty(p => p.Group).Name);
-            }
+            get { return _group ?? (_group = ReflectOn<Element>.GetProperty(p => p.Group).Name); }
         }
 
         public static string Period
         {
-            get
-            {
-                return period ?? (period = ReflectOn<Element>.GetProperty(p => p.Period).Name);
-            }
+            get { return _period ?? (_period = ReflectOn<Element>.GetProperty(p => p.Period).Name); }
         }
 
         public static string AtomicNumber
         {
-            get
-            {
-                return atomicNumber ?? (atomicNumber = ReflectOn<Element>.GetProperty(p => p.AtomicNumber).Name);
-            }
+            get { return _atomicNumber ?? (_atomicNumber = ReflectOn<Element>.GetProperty(p => p.AtomicNumber).Name); }
         }
 
         public static string State
         {
-            get
-            {
-                return state ?? (state = ReflectOn<Element>.GetProperty(p => p.State).Name);
-            }
+            get { return _state ?? (_state = ReflectOn<Element>.GetProperty(p => p.State).Name); }
         }
 
         public static string ChemicalSymbol
         {
             get
             {
-                return chemicalSymbol ?? (chemicalSymbol = ReflectOn<Element>.GetProperty(p => p.ChemicalSymbol).Name);
+                return _chemicalSymbol ?? (_chemicalSymbol = ReflectOn<Element>.GetProperty(p => p.ChemicalSymbol).Name);
             }
         }
 
         public static string Url
         {
-            get
-            {
-                return url ?? (url = ReflectOn<Element>.GetProperty(p => p.Url).Name);
-            }
+            get { return _url ?? (_url = ReflectOn<Element>.GetProperty(p => p.Url).Name); }
         }
 
         public static string Name
         {
-            get
-            {
-                return name ?? (name = ReflectOn<Element>.GetProperty(p => p.Name).Name);
-            }
+            get { return _name ?? (_name = ReflectOn<Element>.GetProperty(p => p.Name).Name); }
         }
 
         public static string MassUncertainty
         {
             get
             {
-                return massUncertainty
-                       ?? (massUncertainty = ReflectOn<Element>.GetProperty(p => p.MassUncertainty).Name);
+                return _massUncertainty
+                       ?? (_massUncertainty = ReflectOn<Element>.GetProperty(p => p.MassUncertainty).Name);
             }
         }
 
@@ -84,8 +66,8 @@
         {
             get
             {
-                return relativeAtomicMass
-                       ?? (relativeAtomicMass = ReflectOn<Element>.GetProperty(p => p.RelativeAtomicMass).Name);
+                return _relativeAtomicMass
+                       ?? (_relativeAtomicMass = ReflectOn<Element>.GetProperty(p => p.RelativeAtomicMass).Name);
             }
         }
 
@@ -93,8 +75,8 @@
         {
             get
             {
-                return naturalOccurrence
-                       ?? (naturalOccurrence = ReflectOn<Element>.GetProperty(p => p.NaturalOccurrence).Name);
+                return _naturalOccurrence
+                       ?? (_naturalOccurrence = ReflectOn<Element>.GetProperty(p => p.NaturalOccurrence).Name);
             }
         }
 
@@ -102,8 +84,8 @@
         {
             get
             {
-                return countryOfDiscovery
-                       ?? (countryOfDiscovery = ReflectOn<Element>.GetProperty(p => p.CountryOfDiscovery).Name);
+                return _countryOfDiscovery
+                       ?? (_countryOfDiscovery = ReflectOn<Element>.GetProperty(p => p.CountryOfDiscovery).Name);
             }
         }
 
@@ -111,8 +93,8 @@
         {
             get
             {
-                return chemicalProperty
-                       ?? (chemicalProperty = ReflectOn<Element>.GetProperty(p => p.ChemicalProperty).Name);
+                return _chemicalProperty
+                       ?? (_chemicalProperty = ReflectOn<Element>.GetProperty(p => p.ChemicalProperty).Name);
             }
         }
     }

@@ -4,12 +4,9 @@
     {
         public CellContents(ReportItem reportItem)
             : base(reportItem)
-        {            
+        {
         }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(CellContents).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(CellContents).GetShortName();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Xml.Linq;
 
@@ -8,43 +9,34 @@ namespace DynamicRdlc.Rdl
     {
         private const double Dpi = 96;
 
-        private readonly System.Drawing.Image image;
-        private readonly string imageName;
+        private readonly Image _image;
+        private readonly string _imageName;
 
-        public EmbeddedImage(System.Drawing.Image image, string imageName)
+        public EmbeddedImage(Image image, string imageName)
         {
-            this.image = image;
-            this.Width = new Inch(image.Size.Width / Dpi);
-            this.Height = new Inch(image.Size.Height / Dpi);
-            this.imageName = imageName;
+            _image = image;
+            Width = new Inch(image.Size.Width/Dpi);
+            Height = new Inch(image.Size.Height/Dpi);
+            _imageName = imageName;
         }
 
         public Inch Width { get; private set; }
 
         public Inch Height { get; private set; }
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
-        private XElement Build()
-        {
-            return new XElement(
-                typeof(EmbeddedImage).GetShortName(),
-                new XAttribute("Name", this.imageName),
-                new XElement("MIMEType", "image/png"),
-                new XElement("ImageData", this.ConvertToBase64String()));
-        }
+        private XElement Build() => new XElement(
+            typeof(EmbeddedImage).GetShortName(),
+            new XAttribute("Name", _imageName),
+            new XElement("MIMEType", "image/png"),
+            new XElement("ImageData", ConvertToBase64String()));
 
         private string ConvertToBase64String()
         {
             using (var ms = new MemoryStream())
             {
-                this.image.Save(ms, this.image.RawFormat);
+                _image.Save(ms, _image.RawFormat);
                 return Convert.ToBase64String(ms.ToArray());
             }
         }

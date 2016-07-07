@@ -7,9 +7,6 @@
         {
         }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(GroupExpressions).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(GroupExpressions).GetShortName();
     }
 }

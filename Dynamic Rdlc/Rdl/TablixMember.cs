@@ -4,9 +4,9 @@ namespace DynamicRdlc.Rdl
 {
     public class TablixMember : IElement
     {
-        private readonly Group group;
-        private readonly SortExpressions sortExpressions;
-        private readonly TablixHeader tablixHeader;
+        private readonly Group _group;
+        private readonly SortExpressions _sortExpressions;
+        private readonly TablixHeader _tablixHeader;
 
         public TablixMember()
         {
@@ -14,57 +14,45 @@ namespace DynamicRdlc.Rdl
 
         public TablixMember(Group group, SortExpressions sortExpressions, TablixHeader tablixHeader)
         {
-            this.group = group;
-            this.sortExpressions = sortExpressions;
-            this.tablixHeader = tablixHeader;
+            _group = group;
+            _sortExpressions = sortExpressions;
+            _tablixHeader = tablixHeader;
         }
 
-        public Inch Size
-        {
-            get
-            {
-                return this.tablixHeader == null ? new Inch(0) : this.tablixHeader.Size;
-            }
-        }
-        
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public Inch Size => _tablixHeader == null ? new Inch(0) : _tablixHeader.Size;
+
+        public XElement Element => Build();
 
         private XElement Build()
         {
             var result = new XElement(typeof(TablixMember).GetShortName());
-            this.ConfigureGroup(result);
-            this.ConfigureSortExpressions(result);
-            this.ConfigureTablixHeader(result);
+            ConfigureGroup(result);
+            ConfigureSortExpressions(result);
+            ConfigureTablixHeader(result);
             return result;
         }
 
         private void ConfigureGroup(XElement tablixMember)
         {
-            if (this.group != null)
+            if (_group != null)
             {
-                tablixMember.Add(this.group.Element);
+                tablixMember.Add(_group.Element);
             }
         }
 
         private void ConfigureSortExpressions(XElement tablixMember)
         {
-            if (this.sortExpressions != null)
+            if (_sortExpressions != null)
             {
-                tablixMember.Add(this.sortExpressions.Element);
+                tablixMember.Add(_sortExpressions.Element);
             }
         }
 
         private void ConfigureTablixHeader(XElement tablixMember)
         {
-            if (this.tablixHeader != null)
+            if (_tablixHeader != null)
             {
-                tablixMember.Add(this.tablixHeader.Element);
+                tablixMember.Add(_tablixHeader.Element);
             }
         }
     }

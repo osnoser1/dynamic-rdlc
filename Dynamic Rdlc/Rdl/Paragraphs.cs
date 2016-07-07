@@ -3,7 +3,7 @@
     public class Paragraphs : CollectionOf<Paragraph>, IElement
     {
         public Paragraphs()
-        {            
+        {
         }
 
         public Paragraphs(Paragraph paragraph)
@@ -11,9 +11,6 @@
         {
         }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(Paragraphs).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(Paragraphs).GetShortName();
     }
 }

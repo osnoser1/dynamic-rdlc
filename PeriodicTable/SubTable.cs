@@ -12,9 +12,10 @@ namespace PeriodicTable
                 CreateTablixRowHierarchy(),
                 CreateTablixBody(dataSetName),
                 dataSetName)
-                       {
-                           Top = new Inch(1.4), Left = new Inch(1.5)
-                       };
+            {
+                Top = new Inch(1.4),
+                Left = new Inch(1.5)
+            };
         }
 
         private static TablixCorner CreateTablixCorner()
@@ -30,15 +31,15 @@ namespace PeriodicTable
         private static TablixColumnHierarchy CreateTablixColumnHierarchy()
         {
             var group = new Group(new GroupExpressions(new GroupExpression(CreateColumnGroupExpression())));
-            
+
             var sortExpression =
                 new SortExpression(new Value("=" + Expression.FieldsValue(ElementProperty.AtomicNumber)));
             var sortExpressions = new SortExpressions(sortExpression);
-            
+
             var header = new TablixHeader(
                 new Inch(0.3),
                 new CellContents(new Textbox(new Paragraph(new TextRuns(new TextRun())))));
-            
+
             return new TablixColumnHierarchy(new TablixMembers(new TablixMember(group, sortExpressions, header)));
         }
 
@@ -53,14 +54,14 @@ namespace PeriodicTable
                 new SortExpressions(
                     new SortExpression(new Value("=" + Expression.FieldsValue(ElementProperty.ChemicalProperty))));
 
-            var textRun = new TextRun { Value = CreateRowHierarchyTextExpression(), FontWeight = FontWeight.Bold };
-            var paragraph = new Paragraph(new TextRuns(textRun)) { TextAlign = TextAlign.Right };
+            var textRun = new TextRun {Value = CreateRowHierarchyTextExpression(), FontWeight = FontWeight.Bold};
+            var paragraph = new Paragraph(new TextRuns(textRun)) {TextAlign = TextAlign.Right};
             var textbox = new Textbox(paragraph)
-                              {
-                                  TextboxStyle = new TextboxStyle { VerticalAlign = VerticalAlign.Middle }
-                              };
+            {
+                TextboxStyle = new TextboxStyle {VerticalAlign = VerticalAlign.Middle}
+            };
             var header = new TablixHeader(new Inch(1.3), new CellContents(textbox));
-            
+
             return new TablixRowHierarchy(new TablixMembers(new TablixMember(group, sortExpressions, header)));
         }
 
@@ -76,18 +77,19 @@ namespace PeriodicTable
 
         private static string CreateColumnGroupExpression()
         {
-            const int LanthanumAtomicNumber = 57;
-            const int ActiniumAtomicNumber = 89;
+            const int lanthanumAtomicNumber = 57;
+            const int actiniumAtomicNumber = 89;
             return "=IIf("
-                + Expression.FieldsValue(ElementProperty.ChemicalProperty) + "=" + (int)ChemicalProperty.Lanthanide + ","
-                + Expression.FieldsValue(ElementProperty.AtomicNumber) + "-" + LanthanumAtomicNumber + ","
-                + Expression.FieldsValue(ElementProperty.AtomicNumber) + "-" + ActiniumAtomicNumber + ")";
+                   + Expression.FieldsValue(ElementProperty.ChemicalProperty) + "=" + (int) ChemicalProperty.Lanthanide +
+                   ","
+                   + Expression.FieldsValue(ElementProperty.AtomicNumber) + "-" + lanthanumAtomicNumber + ","
+                   + Expression.FieldsValue(ElementProperty.AtomicNumber) + "-" + actiniumAtomicNumber + ")";
         }
 
         private static string CreateRowHierarchyTextExpression()
         {
             var result = "=IIf(" + Expression.FieldsValue(ElementProperty.ChemicalProperty) + "="
-                         + (int)ChemicalProperty.Lanthanide + ", '* Lanthanides', '** Actinides')";
+                         + (int) ChemicalProperty.Lanthanide + ", '* Lanthanides', '** Actinides')";
             return result.ReplaceSingleQuoteWithDoubleQuote();
         }
     }

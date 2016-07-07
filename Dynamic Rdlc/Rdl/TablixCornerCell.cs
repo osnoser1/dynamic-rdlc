@@ -7,9 +7,6 @@
         {
         }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(TablixCornerCell).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(TablixCornerCell).GetShortName();
     }
 }

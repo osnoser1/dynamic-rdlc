@@ -9,6 +9,6 @@
         Solid,
         Double,
         DashDot,
-        DashDotDot,
+        DashDotDot
     }
 }

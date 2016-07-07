@@ -7,17 +7,8 @@
         {
         }
 
-        public Inch Width
-        {
-            get
-            {
-                return this.Item.Size;
-            }
-        }
+        public Inch Width => Item.Size;
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(TablixRowHierarchy).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(TablixRowHierarchy).GetShortName();
     }
 }

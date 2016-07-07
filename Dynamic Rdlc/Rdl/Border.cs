@@ -10,39 +10,27 @@ namespace DynamicRdlc.Rdl
 
         public Point Width { get; set; }
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        protected virtual string BorderName => "Border";
 
-        protected virtual string BorderName
-        {
-            get
-            {
-                return "Border";
-            }
-        }
+        public XElement Element => Build();
 
         private XElement Build()
         {
-            if (this.Style == null)
+            if (Style == null)
             {
                 return null;
             }
 
-            var result = new XElement(this.BorderName);
-            result.Add(new XElement("Style", this.Style));
-            if (this.Color != null)
+            var result = new XElement(BorderName);
+            result.Add(new XElement("Style", Style));
+            if (Color != null)
             {
-                result.Add(new XElement("Color", this.Color));
+                result.Add(new XElement("Color", Color));
             }
 
-            if (this.Width != null)
+            if (Width != null)
             {
-                result.Add(new XElement("Width", this.Width));
+                result.Add(new XElement("Width", Width));
             }
 
             return result;

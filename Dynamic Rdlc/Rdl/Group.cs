@@ -4,29 +4,20 @@ namespace DynamicRdlc.Rdl
 {
     public class Group : IElement
     {
-        private static int index;
-        private readonly string name;
-        private readonly GroupExpressions groupExpressions;
-        private readonly string rdlName;
+        private static int _index;
+        private readonly GroupExpressions _groupExpressions;
+        private readonly string _name;
+        private readonly string _rdlName;
 
         public Group(GroupExpressions groupExpressions)
         {
-            this.rdlName = typeof(Group).GetShortName();
-            this.name = this.rdlName + ++index;
-            this.groupExpressions = groupExpressions;
+            _rdlName = typeof(Group).GetShortName();
+            _name = _rdlName + ++_index;
+            _groupExpressions = groupExpressions;
         }
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
-        private XElement Build()
-        {
-            return new XElement(this.rdlName, new XAttribute("Name", this.name), this.groupExpressions.Element);
-        }
+        private XElement Build() => new XElement(_rdlName, new XAttribute("Name", _name), _groupExpressions.Element);
     }
 }

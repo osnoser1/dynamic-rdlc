@@ -6,8 +6,8 @@ namespace DynamicRdlc.Rdl
     {
         protected override XElement Build()
         {
-            var result = new XElement(typeof(Body).GetShortName(), this.ReportItems.Element);
-            this.ConfigureContainerHeight(result);
+            var result = new XElement(typeof(Body).GetShortName(), ReportItems.Element);
+            ConfigureContainerHeight(result);
             return result;
         }
     }

@@ -12,22 +12,13 @@ namespace DynamicRdlc.Rdl
 
         public Inch BottomMargin { get; set; }
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        public XElement Element => Build();
 
-        private XElement Build()
-        {
-            return new XElement(
-                typeof(Page).GetShortName(),
-                new XElement("LeftMargin", this.LeftMargin),
-                new XElement("RightMargin", this.RightMargin),
-                new XElement("TopMargin", this.TopMargin),
-                new XElement("BottomMargin", this.BottomMargin));
-        }
+        private XElement Build() => new XElement(
+            typeof(Page).GetShortName(),
+            new XElement("LeftMargin", LeftMargin),
+            new XElement("RightMargin", RightMargin),
+            new XElement("TopMargin", TopMargin),
+            new XElement("BottomMargin", BottomMargin));
     }
 }

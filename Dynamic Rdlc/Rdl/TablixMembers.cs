@@ -18,13 +18,10 @@ namespace DynamicRdlc.Rdl
             get
             {
                 var result = new Inch(0);
-                return this.Collection.Aggregate(result, (current, tablixMember) => current + tablixMember.Size);
+                return Collection.Aggregate(result, (current, tablixMember) => current + tablixMember.Size);
             }
         }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(TablixMembers).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(TablixMembers).GetShortName();
     }
 }

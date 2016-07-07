@@ -6,32 +6,26 @@ namespace DynamicRdlc.Rdl
     {
         protected ParentOf(T item)
         {
-            this.Item = item;
+            Item = item;
         }
 
-        public XElement Element
-        {
-            get
-            {
-                return this.Build();
-            }
-        }
+        protected T Item { get; }
 
-        protected T Item { get; private set; }
+        public XElement Element => Build();
 
         protected abstract string GetRdlName();
 
         protected virtual XElement Build()
         {
-            var result = new XElement(this.GetRdlName());
-            var value = this.Item as IElement;
+            var result = new XElement(GetRdlName());
+            var value = Item as IElement;
             if (value != null)
             {
                 result.Add(value.Element);
             }
             else
             {
-                result.Add(this.Item);
+                result.Add(Item);
             }
 
             return result;

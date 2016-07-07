@@ -6,10 +6,10 @@ namespace DynamicRdlc.Rdl
     {
         public TextboxStyle()
         {
-            this.PaddingLeft = new Point(2);
-            this.PaddingRight = new Point(2);
-            this.PaddingTop = new Point(2);
-            this.PaddingBottom = new Point(2);
+            PaddingLeft = new Point(2);
+            PaddingRight = new Point(2);
+            PaddingTop = new Point(2);
+            PaddingBottom = new Point(2);
         }
 
         public Point PaddingLeft { get; set; }
@@ -25,51 +25,51 @@ namespace DynamicRdlc.Rdl
         protected override XElement Build()
         {
             var result = base.Build();
-            this.ConfigurePaddingTop(result);
-            this.ConfigurePaddingBottom(result);
-            this.ConfigurePaddingLeft(result);
-            this.ConfigurePaddingRight(result);
-            this.ConfigureVerticalAlign(result);
+            ConfigurePaddingTop(result);
+            ConfigurePaddingBottom(result);
+            ConfigurePaddingLeft(result);
+            ConfigurePaddingRight(result);
+            ConfigureVerticalAlign(result);
             return result;
         }
 
         private void ConfigurePaddingTop(XElement textboxStyle)
         {
-            if (this.PaddingTop != null)
+            if (PaddingTop != null)
             {
-                textboxStyle.Add(new XElement("PaddingTop", this.PaddingTop));
+                textboxStyle.Add(new XElement("PaddingTop", PaddingTop));
             }
         }
 
         private void ConfigurePaddingBottom(XElement textboxStyle)
         {
-            if (this.PaddingBottom != null)
+            if (PaddingBottom != null)
             {
-                textboxStyle.Add(new XElement("PaddingBottom", this.PaddingBottom));
+                textboxStyle.Add(new XElement("PaddingBottom", PaddingBottom));
             }
         }
 
         private void ConfigurePaddingLeft(XElement textboxStyle)
         {
-            if (this.PaddingLeft != null)
+            if (PaddingLeft != null)
             {
-                textboxStyle.Add(new XElement("PaddingLeft", this.PaddingLeft));
+                textboxStyle.Add(new XElement("PaddingLeft", PaddingLeft));
             }
         }
 
         private void ConfigurePaddingRight(XElement textboxStyle)
         {
-            if (this.PaddingRight != null)
+            if (PaddingRight != null)
             {
-                textboxStyle.Add(new XElement("PaddingRight", this.PaddingRight));
+                textboxStyle.Add(new XElement("PaddingRight", PaddingRight));
             }
         }
 
         private void ConfigureVerticalAlign(XElement textboxStyle)
         {
-            if (this.VerticalAlign != VerticalAlign.Default)
+            if (VerticalAlign != VerticalAlign.Default)
             {
-                textboxStyle.Add(new XElement("VerticalAlign", this.VerticalAlign));
+                textboxStyle.Add(new XElement("VerticalAlign", VerticalAlign));
             }
         }
     }

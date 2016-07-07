@@ -14,13 +14,10 @@ namespace DynamicRdlc.Rdl
             get
             {
                 var result = new Inch(0);
-                return this.Collection.Aggregate(result, (current, tablixColum) => current + tablixColum.Width);
+                return Collection.Aggregate(result, (current, tablixColum) => current + tablixColum.Width);
             }
         }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(TablixColumns).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(TablixColumns).GetShortName();
     }
 }

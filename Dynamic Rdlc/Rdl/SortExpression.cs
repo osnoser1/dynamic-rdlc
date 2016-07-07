@@ -7,9 +7,6 @@
         {
         }
 
-        protected sealed override string GetRdlName()
-        {
-            return typeof(SortExpression).GetShortName();
-        }
+        protected sealed override string GetRdlName() => typeof(SortExpression).GetShortName();
     }
 }
