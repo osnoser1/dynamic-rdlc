@@ -18,6 +18,10 @@ namespace DynamicRdlc.Rdl
 
         public XElement Element => Build();
 
-        private XElement Build() => new XElement(_rdlName, new XAttribute("Name", _name), _groupExpressions.Element);
+        private XElement Build()
+            =>
+                _groupExpressions != null
+                    ? new XElement(_rdlName, new XAttribute("Name", _name), _groupExpressions.Element)
+                    : new XElement(_rdlName, new XAttribute("Name", _name));
     }
 }

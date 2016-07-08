@@ -9,6 +9,10 @@ namespace DynamicRdlc.Rdl
         {
         }
 
+        public TablixColumns()
+        {
+        }
+
         public Inch Width
         {
             get

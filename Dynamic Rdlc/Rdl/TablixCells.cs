@@ -7,6 +7,10 @@
         {
         }
 
+        public TablixCells()
+        {
+        }
+
         protected sealed override string GetRdlName() => typeof(TablixCells).GetShortName();
     }
 }

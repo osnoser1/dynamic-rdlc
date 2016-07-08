@@ -60,6 +60,7 @@
     <Compile Include="Rdl\GroupExpressions.cs" />
     <Compile Include="Rdl\IElement.cs" />
     <Compile Include="Rdl\Inch.cs" />
+    <Compile Include="Rdl\KeepWithGroup.cs" />
     <Compile Include="Rdl\LeftBorder.cs" />
     <Compile Include="Rdl\MarkupType.cs" />
     <Compile Include="Rdl\Page.cs" />

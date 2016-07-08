@@ -4,12 +4,18 @@ namespace DynamicRdlc.Rdl
 {
     public class TablixMember : IElement
     {
+        private readonly KeepWithGroup? _keepWithGroup;
         private readonly Group _group;
         private readonly SortExpressions _sortExpressions;
         private readonly TablixHeader _tablixHeader;
 
         public TablixMember()
         {
+        }
+
+        public TablixMember(KeepWithGroup keepWithGroup)
+        {
+            _keepWithGroup = keepWithGroup;
         }
 
         public TablixMember(Group group, SortExpressions sortExpressions, TablixHeader tablixHeader)
@@ -26,10 +32,19 @@ namespace DynamicRdlc.Rdl
         private XElement Build()
         {
             var result = new XElement(typeof(TablixMember).GetShortName());
+            ConfigureKeepWithGroup(result);
             ConfigureGroup(result);
             ConfigureSortExpressions(result);
             ConfigureTablixHeader(result);
             return result;
+        }
+
+        private void ConfigureKeepWithGroup(XElement tablixMember)
+        {
+            if (_keepWithGroup != null)
+            {
+                tablixMember.Add(new XElement("KeepWithGroup", _keepWithGroup));
+            }
         }
 
         private void ConfigureGroup(XElement tablixMember)
