@@ -25,6 +25,11 @@ namespace DynamicRdlc.Rdl
             _body = body;
         }
 
+        public ReportSection(Body body, Page page)
+        {
+            _body = body;
+            _page = page;
+        }
 
         public XElement Element => Build();
 
