@@ -1,4 +1,5 @@
 ﻿using System.Xml.Linq;
+using DynamicRdlc.Utils;
 
 namespace DynamicRdlc.Rdl
 {
@@ -14,6 +15,8 @@ namespace DynamicRdlc.Rdl
 
         public string Color { get; set; }
 
+        public string Format { get; set; }
+
         public MarkupType MarkupType { get; set; }
 
         public XElement Element => Build();
@@ -28,27 +31,12 @@ namespace DynamicRdlc.Rdl
 
         private void ConfigureStyle(XElement textRun)
         {
-            var style = new XElement("Style");
-
-            if (FontFamily != null)
-            {
-                style.Add(new XElement("FontFamily", FontFamily));
-            }
-
-            if (FontSize != null)
-            {
-                style.Add(new XElement("FontSize", FontSize));
-            }
-
-            if (FontWeight != FontWeight.Default)
-            {
-                style.Add(new XElement("FontWeight", FontWeight));
-            }
-
-            if (Color != null)
-            {
-                style.Add(new XElement("Color", Color));
-            }
+            var style = new XElement("Style")
+                .AddIfNotNull("FontFamily", FontFamily)
+                .AddIfNotNull("FontSize", FontSize)
+                .AddIfNotNull("Format", Format)
+                .AddIfNotNull("FontWeight", FontWeight)
+                .AddIfNotNull("Color", Color);
 
             if (style.HasElements)
             {

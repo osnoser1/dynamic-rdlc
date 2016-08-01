@@ -17,6 +17,13 @@ namespace DynamicRdlc.Rdl
             _fields = new List<string>();
         }
 
+        public DataSet(string name)
+        {
+            Name = name;
+            _rdlName = typeof(DataSet).GetShortName();
+            _fields = new List<string>();
+        }
+
         public string Name { get; }
 
         public XElement Element => Build();

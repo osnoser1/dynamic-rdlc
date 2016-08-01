@@ -26,6 +26,8 @@ namespace DynamicRdlc.Rdl
 
         public static explicit operator Inch(string s) => new Inch(double.Parse(s.Replace(Unit, string.Empty)));
 
+        public static explicit operator Inch(double d) => new Inch(d);
+
         public static Inch CentiInchToInch(int centiInch) => new Inch(centiInch*HundredthOfInches);
 
         public override string ToString() => Value.ToString("0.###########", CultureInfo.InvariantCulture) + Unit;

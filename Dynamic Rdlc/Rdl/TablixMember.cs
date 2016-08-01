@@ -8,6 +8,7 @@ namespace DynamicRdlc.Rdl
         private readonly Group _group;
         private readonly SortExpressions _sortExpressions;
         private readonly TablixHeader _tablixHeader;
+        public bool RepeatOnNewPage { get; set; }
 
         public TablixMember()
         {
@@ -36,7 +37,16 @@ namespace DynamicRdlc.Rdl
             ConfigureGroup(result);
             ConfigureSortExpressions(result);
             ConfigureTablixHeader(result);
+            ConfigureRepeatOnNewPage(result);
             return result;
+        }
+
+        private void ConfigureRepeatOnNewPage(XElement tablixMember)
+        {
+            if (RepeatOnNewPage)
+            {
+                tablixMember.Add(new XElement("RepeatOnNewPage", RepeatOnNewPage));
+            }
         }
 
         private void ConfigureKeepWithGroup(XElement tablixMember)
