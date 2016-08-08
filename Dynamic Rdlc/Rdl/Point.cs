@@ -1,4 +1,6 @@
-﻿namespace DynamicRdlc.Rdl
+﻿using System.Globalization;
+
+namespace DynamicRdlc.Rdl
 {
     public class Point
     {
@@ -9,6 +11,6 @@
             _point = point;
         }
 
-        public override string ToString() => _point + "pt";
+        public override string ToString() => _point.ToString(CultureInfo.InvariantCulture) + "pt";
     }
 }
